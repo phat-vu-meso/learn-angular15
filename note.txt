@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=qtgpopMWhCY
+
+create a new component
+ -> ng g c Home <g: generate, c:component>
+
+ 
