@@ -1,4 +1,27 @@
 <div class="test">
     <p>home works!</p>
     <h2>This is Home component</h2>
+    <h2>Welcome {{name}}</h2>
+
+    <!-- <input type="text" value="{{name}}" /><br/>
+    <input type="text" [value]="name" title="this is {{name}}" /><br/> -->
+    <input type="text" [(ngModel)]="name" [title]="'this is' + name" />
+
+    <button (click)="resetName()">Reset</button>
+
+    <br><br>
+    <input type="text" [(ngModel)]="age" />
+    <h2>your age is {{age}}</h2>
+    <!-- <h3 *ngIf="age > 18">You''re old enough to vote - age = {{age}}</h3>
+    <h3 *ngIf="age <= 18">You''re NOT old enough to vote - age = {{age}}</h3> -->
+    <!-- <h3 *ngIf="age === 18">You''re still young - age = 18</h3> -->
+
+    <!-- using template -->
+    <div *ngIf="age <= 18; then young; else old"></div>
+    <ng-template #young>
+        <h3>You''re old enough to vote - age = {{age}}</h3>
+    </ng-template>
+    <ng-template #old>
+        <h3>You''re TOO old enough to vote - age = {{age}}</h3>
+    </ng-template>
 </div>
